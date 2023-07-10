@@ -22,9 +22,25 @@ class NationalPark:
         return [ t for t in Trip.all if t.national_park == self ]
     
     def visitors( self ):
-        visitor_list = { t.visitor for t in self.trips() }
-        return list( visitor_list )
+
+
+#                    what will end up
+#                       in the set
+#                          |
+#                          V 
+        visitor_set = { t.visitor for t in self.trips() }
+#                                     ^
+#                                     |
+#                             a variable we are 
+#                             declaring right here
+#                           to represent one of the 
+#                            "trips" in self.trips()
+
+        # returning a list cause the README.md sez so.
+        return list( visitor_set )
         
+
+
     
     def total_visits( self ):
         return len( self.trips() )
