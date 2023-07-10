@@ -1,6 +1,18 @@
+
+
+
+  NationalPark ---< Trip >--- Visitor
+
+
+  NationalPark ----< Trip => "a national park has many trips" 
+  Trip >---- NationalPark => "a trip belongs to a National Park"
+
+
+
+
 # Mock Code Challenge - National Parks (Object Relationships)
 
-For this assignment, we'll be working with a national park planner-style domain.
+For this assignment, we'll ibe working with a national park planner-style domain.
 
 We have three models: `NationalPark`, `Visitor`, and `Trip`.
 
